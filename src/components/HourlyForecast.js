@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, FlatList } from 'react-native'
+import { StyleSheet, Text, View, FlatList, Platform } from 'react-native'
 import React from 'react'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { BlurView } from 'expo-blur';
@@ -104,7 +104,9 @@ const styles = StyleSheet.create({
     container: {
         marginHorizontal: 20,
         borderRadius: 15,
-        overflow: 'hidden'
+        overflow: 'hidden',
+        backgroundColor: Platform.OS === 'ios' ? 'transparent' : 'rgba(22, 22, 75, 0.95)'
+
     },
     card:{
         paddingVertical:10

@@ -6,15 +6,15 @@ import { WidgetStyle } from '../../../styles/theme.style';
 import { BlurView } from 'expo-blur';
 
 const Compass = () => {
-    const deg = '90deg'
+    const deg = '45deg'
 
     return (
         <View style={{ borderRadius: 15, alignItems: 'center' }}>
 
+<Text style={{ position: 'absolute', zIndex: 1, top: 35, fontSize: 26, fontWeight: '700' }}>NE</Text>
 
 
             <View style={{ backgroundColor: '#ddd', justifyContent: 'center', alignItems: 'center', borderRadius: 100 / 2, width: 100, height: 100, borderStyle: 'dotted', borderWidth: 3 }}>
-            <Text style={{ position: 'absolute', zIndex: 1, top: 0, fontSize: 16, fontWeight: '800' }}>N</Text>
                 <View style={{ justifyContent: 'center', alignItems: 'center', height: '100%', width: '100%', transform: [{ rotate: `${deg}` }] }}>
                     <Ionicons style={{ position: 'absolute', top: -10 }} name='caret-up-outline' size={30} color="#d11" />
                 </View>

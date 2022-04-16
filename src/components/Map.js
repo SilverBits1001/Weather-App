@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Dimensions } from 'react-native'
+import { StyleSheet, Text, View, Dimensions, Platform} from 'react-native'
 import React, { useRef } from 'react'
 import MapView from 'react-native-maps'
 import { BlurView } from 'expo-blur'
@@ -28,7 +28,9 @@ const styles = StyleSheet.create({
         marginHorizontal: 20,
         overflow: 'hidden',
         borderRadius: 15,
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: Platform.OS === 'ios' ? 'transparent' : 'rgba(22, 22, 75, 0.95)'
+
 
     },
     map: {

@@ -1,3 +1,9 @@
+import { Platform, StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+    height: Platform.OS === 'ios' ? 200 : 100
+  });
+
 export default {
     FONT_SIZE_TINY: 12,
     FONT_SIZE_SMALL: 16,
@@ -28,7 +34,9 @@ export const WidgetStyle = {
         width: '49%',
         borderRadius: 15,
         marginVertical: 5,
-        overflow: 'hidden'
+        overflow: 'hidden',
+        backgroundColor: Platform.OS === 'ios' ? 'transparent' : 'rgba(22, 22, 75, 0.95)'
+
     },
     WIDGET_CARD: {
         padding: 15,
