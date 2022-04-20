@@ -4,9 +4,9 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 console.log(process.env)
-
+const port = process.env.PORT || 3000
 const app = express();
-app.listen(3000, () => console.log('listening at 3000'))
+app.listen(port, () => console.log(`Starting port at ${port}`))
 app.use(express.static('public'))
 
 
