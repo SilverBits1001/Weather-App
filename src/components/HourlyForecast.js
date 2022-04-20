@@ -76,7 +76,7 @@ export default function HourlyForecast() {
         <View style={styles.container}>
             <BlurView style={styles.card} tint={'default'} intensity={100}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', padding: 5 }}>
-                    <MaterialCommunityIcons size={18} name='clock' color={'#fff'} />
+                    <MaterialCommunityIcons style={{ marginHorizontal: 5 }} size={18} name='clock' color={'#fff'} />
                     <Text style={styles.description}>Rainy conditions from 5PM-7PM, with scattered thunderstorms excpected at 6PM.</Text>
                 </View>
                 <View

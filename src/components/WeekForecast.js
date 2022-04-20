@@ -80,7 +80,7 @@ export default function WeekForecast() {
         <View style={styles.container}>
             <BlurView style={styles.card} tint={'default'} intensity={100}>
                 <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 7 }}>
-                    <MaterialCommunityIcons size={18} name='calendar' color={'#fff'} />
+                    <MaterialCommunityIcons style={{ marginHorizontal: 5 }} size={18} name='calendar' color={'#fff'} />
                     <Text>7-Day Forecast</Text>
                 </View>
                 <RenderWeek />

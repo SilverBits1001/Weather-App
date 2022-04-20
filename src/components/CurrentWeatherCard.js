@@ -1,5 +1,5 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useEffect } from 'react'
 import WeekForecast from './WeekForecast'
 
 const currentWeather = {
@@ -48,6 +48,21 @@ const currentWeather = {
 
 
 export default function CurrentWeatherCard() {
+
+
+    async function apiFetch() {
+        const apiUrl = 'http://localhost:3000/test'
+        const response = await fetch(apiUrl)
+     
+     
+    }
+
+    useEffect(() => {
+        apiFetch()
+        console.log('hellllo');
+    }, [])
+
+
     return (
         <View style={styles.weatherCard}>
 
@@ -57,9 +72,9 @@ export default function CurrentWeatherCard() {
                     {parseInt(currentWeather.main.temp)}
                 </Text>
                 <Text
-                
-                 style={styles.weatherDetails}
-                 >{currentWeather.weather[0].description}</Text>
+
+                    style={styles.weatherDetails}
+                >{currentWeather.weather[0].description}</Text>
                 <View style={{ flexDirection: 'row' }}>
                     <Text style={styles.weatherDetails}>
                         H: {parseInt(currentWeather.main.temp_min)}&#176;
@@ -69,10 +84,6 @@ export default function CurrentWeatherCard() {
                     </Text>
                 </View>
             </View>
-
-
-
-
         </View >
     )
 }

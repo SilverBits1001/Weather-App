@@ -14,7 +14,6 @@ export default function FeelsLike() {
                     <Text style={styles.title}>Feels Like</Text>
                 </View>
                 <Text style={styles.details}>55&#176;</Text>
-                <Text style={{}}>55&#176;</Text>
             </BlurView >
         </View>
     )

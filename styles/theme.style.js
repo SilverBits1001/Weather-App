@@ -24,13 +24,13 @@ export default {
 
 export const WidgetStyle = {
     DETAILS_SIZE: 35,
-    DETAILS_WEIGHT: '400',
+    DETAILS_WEIGHT: '500',
     TITLE_SIZE: 16,
-    TITLE_WEIGHT: '400',
+    TITLE_WEIGHT: '500',
     TITLE_COLOR: 'black',
 
     WIDGET_CONTAINER: {
-        height: 150,
+        height: 125,
         width: '49%',
         borderRadius: 15,
         marginVertical: 5,
@@ -40,7 +40,7 @@ export const WidgetStyle = {
     },
     WIDGET_CARD: {
         padding: 15,
-        height:'100%'
+        height:'100%',
     }
 
 }
