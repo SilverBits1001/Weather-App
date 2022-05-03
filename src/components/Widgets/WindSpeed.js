@@ -1,19 +1,30 @@
 import { StyleSheet, Text, View, Dimensions } from 'react-native'
-import React from 'react'
+import React, { useContext } from 'react'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { WidgetStyle } from '../../../styles/theme.style';
 import { BlurView } from 'expo-blur';
-export default function AirQuality() {
+import { WeatherContext } from '../WeatherContextProvide';
+export default function WindSpeed() {
+  const weather = useContext(WeatherContext)
+  const wind = Math.round(weather.currWeather.wind.speed)
+  const degree = weather.currWeather.wind.deg
+
+  function getCardinalDirection(angle) {
+    const directions = ['↑ N', '↗ NE', '→ E', '↘ SE', '↓ S', '↙ SW', '← W', '↖ NW'];
+    return directions[Math.round(angle / 45) % 8];
+  }
+
+  const direction = getCardinalDirection(degree)
   return (
     <View style={styles.container}>
       <BlurView style={styles.card} intensity={100} tint={'default'}>
         <View style={{ flexDirection: 'row', marginBottom: 10 }}>
           <MaterialCommunityIcons size={18} name='weather-hazy' color={'#fff'} />
-          <Text style={styles.title}>AirQuality</Text>
+          <Text style={styles.title}>Wind Speed</Text>
         </View>
         <View style={{ alignItems: 'center' }}>
-          <Text style={styles.details}>33</Text>
-          <Text style={{}}>Good</Text>
+          <Text style={styles.details}>{wind} mph</Text>
+          <Text style={styles.title}>{direction}</Text>
 
         </View>
 

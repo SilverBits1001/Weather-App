@@ -1,15 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
-import CurrentLocation from './src/components/CurrentWeatherCard';
-import Home from './src/screens/Home';
+import { WeatherContextProvider } from './src/components/WeatherContextProvide';
+import TabNav from './src/components/TabNav';
+
+
 
 export default function App() {
   return (
-    <View style={styles.container}>
-
-      <Home />
-      <StatusBar style="auto" />
-    </View>
+    <WeatherContextProvider>
+      <TabNav />
+    </WeatherContextProvider >
   );
 }
 

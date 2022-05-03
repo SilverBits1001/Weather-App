@@ -5,7 +5,7 @@ import Humidity from './Widgets/Humidity'
 import Wind from './Widgets/Wind'
 import Visibility from './Widgets/Visibility'
 import Pressure from './Widgets/Pressure'
-import AirQuality from './Widgets/AirQuality'
+import WindSpeed from './Widgets/WindSpeed'
 import Sunrise from './Widgets/Sunrise'
 
 export default function Widgets() {
@@ -16,7 +16,7 @@ export default function Widgets() {
             <Sunrise/>
             <Visibility />
             <Pressure />
-            <AirQuality />
+            <WindSpeed />
         </View>
     )
 }

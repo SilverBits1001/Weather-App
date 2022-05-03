@@ -1,10 +1,14 @@
 import { StyleSheet, Text, View, Dimensions } from 'react-native'
-import React from 'react'
+import React, {useContext} from 'react'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { WidgetStyle } from '../../../styles/theme.style';
 import { BlurView } from 'expo-blur';
+import { WeatherContext } from '../WeatherContextProvide';
 
 export default function FeelsLike() {
+    const weather = useContext(WeatherContext)
+    const humidity = weather.currWeather.main.humidity
+  //  console.log('cuuur', weather.currWeather);
     return (
         <View style={styles.container}>
             <BlurView style={styles.card} intensity={100} tint={'default'}>
@@ -13,7 +17,7 @@ export default function FeelsLike() {
                     <MaterialCommunityIcons size={18} name='weather-fog' color={'#fff'} />
                     <Text style={styles.title}>Humidty</Text>
                 </View>
-                <Text style={styles.details}>100%</Text>
+                <Text style={styles.details}>{humidity}%</Text>
             </BlurView>
         </View>
     )
